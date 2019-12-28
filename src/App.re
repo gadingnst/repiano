@@ -21,6 +21,24 @@ let make = () => {
     ];
 
     <>
+        <h1
+            style=(ReactDOMRe.Style.make(
+                ~textAlign="center",
+                ~color="#fff",
+                ~marginBottom="0",
+                ()
+            ))
+        >
+            {React.string("Repiano App using ReasonML")}
+        </h1>
+        <hr
+            style=(ReactDOMRe.Style.make(
+                ~margin="8px auto 32px auto",
+                ~color="#fff",
+                ~width="75%",
+                ()
+            ))
+        />
         <div className="piano">
             {ReasonReact.array(List.map(
                 key =>
@@ -32,6 +50,14 @@ let make = () => {
                 keys
             ) |> Array.of_list)}
         </div>
-        <h4>{React.string("Built with Bullshit by Sutan Nasution.")}</h4>
+        <h4
+            style=(ReactDOMRe.Style.make(
+                ~textAlign="center",
+                ~color="#fff",
+                ()
+            ))
+        >
+            {React.string("Built with Bullshit by Sutan Nasution.")}
+        </h4>
     </>
 }
