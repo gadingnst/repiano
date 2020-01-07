@@ -14,7 +14,8 @@ module.exports = {
   },
   plugins: [
     new CopyWebpackPlugin([
-      { from: 'public', to: '.' }
+      { from: 'indexProduction.html', to: 'index.html' },
+      { from: 'notes', to: 'notes' }
     ])
   ]
 };
