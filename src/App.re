@@ -29,7 +29,7 @@ let make = () => {
                 ()
             ))
         >
-            {React.string("Repiano App using ReasonML")}
+            {React.string("Simple piano kits built using ReasonML")}
         </h1>
         <hr
             style=(ReactDOMRe.Style.make(

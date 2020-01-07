@@ -10,9 +10,9 @@ let make = (~note: string, ~color: string) => {
             let audioNote = document##getElementById("audio-"++note);
             audioNote##currentTime #= 0;
             keyNote##add("active");
-            audioNote##play()
+            audioNote##play();
             audioNote##addEventListener("ended", _ => {
-                keyNote##remove("active")
+                keyNote##remove("active");
             });
         })
     >

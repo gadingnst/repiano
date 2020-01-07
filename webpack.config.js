@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/Index.bs.js',
@@ -8,7 +9,12 @@ module.exports = {
   // you didn't know this
   mode: 'production',
   output: {
-    path: path.join(__dirname, "bundleOutput"),
+    path: path.join(__dirname, 'dist'),
     filename: 'index.js',
   },
+  plugins: [
+    new CopyWebpackPlugin([
+      { from: 'public', to: '.' }
+    ])
+  ]
 };
